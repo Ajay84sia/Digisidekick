@@ -1,4 +1,4 @@
-import { API_DELETE_MY_SUCCESS, API_FAILED, API_GET_MY_SUCCESS, API_GET_SUCCESS, API_REQUEST } from "./actionTypes";
+import { API_DELETE_MY_SUCCESS, API_FAILED, API_GET_MY_SUCCESS, API_GET_SUCCESS, API_POST_SUCCESS, API_REQUEST } from "./actionTypes";
 
 const initialState = {
     isLoading: false,
@@ -16,11 +16,14 @@ export const reducer = (state = initialState, { type, payload }) => {
         case API_GET_SUCCESS:
             return { ...state, isLoading: false, usersData: [...payload] }
 
+        case API_POST_SUCCESS:
+            return { ...state, isLoading: false }
+
         case API_GET_MY_SUCCESS:
             return { ...state, isLoading: false, myUsersData: [...payload] }
 
         case API_DELETE_MY_SUCCESS:
-            return { ...state, isLoading: false}
+            return { ...state, isLoading: false }
 
         case API_FAILED:
             return { ...state, isLoading: false, isError: true }

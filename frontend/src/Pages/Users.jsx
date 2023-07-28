@@ -43,7 +43,6 @@ const Users = () => {
     dispatch(getMyDataFun());
   }, []);
 
-  console.log(myUsersData);
   return (
     <Box style={{ paddingTop: "100px" }}>
       <HStack margin="20px" marginLeft="70%" gap="40px">
