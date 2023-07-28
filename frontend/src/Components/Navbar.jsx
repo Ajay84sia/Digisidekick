@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       <Box>
         <Link to="/">
-          <Heading>Digisidekick</Heading>
+          <Heading>Digi Sidekick</Heading>
         </Link>
       </Box>
       <Flex justifyContent={"space-around"} width={"50%"} spacing={10}>
