@@ -1,5 +1,5 @@
 import axios from "axios"
-import { API_DELETE_MY_SUCCESS, API_FAILED, API_GET_MY_SUCCESS, API_GET_SUCCESS, API_POST_SUCCESS, API_REQUEST } from "./actionTypes"
+import { API_DELETE_MY_SUCCESS, API_EDIT_MY_SUCCESS, API_FAILED, API_GET_MY_SUCCESS, API_GET_SUCCESS, API_POST_SUCCESS, API_REQUEST } from "./actionTypes"
 
 
 let baseUrl = "https://grumpy-tuna-flannel-shirt.cyclic.app"
@@ -119,6 +119,22 @@ export const addDataFun = (formData) => (dispatch) => {
     }).then((res) => {
         dispatch({ type: API_POST_SUCCESS })
         localStorage.setItem("marketmsg", res.data.msg);
+    }).catch((err) => {
+        dispatch({ type: API_FAILED })
+    })
+
+}
+
+export const editMyDataFun = (id, newData) => (dispatch) => {
+
+    dispatch({ type: API_REQUEST })
+
+    return axios.patch(`${baseUrl}/users/update/${id}`, newData, {
+        headers: {
+            "Authorization": `bearer ${localStorage.getItem("token")}`,
+        }
+    }).then((res) => {
+        dispatch({ type: API_EDIT_MY_SUCCESS })
     }).catch((err) => {
         dispatch({ type: API_FAILED })
     })
