@@ -36,7 +36,7 @@ const Navbar = () => {
         </Link>
       </Box>
       <Flex justifyContent={"space-around"} width={"50%"} spacing={10}>
-        <Link to="/allusers">
+        <Link to="/users">
           <Button colorScheme="teal" size="md">
             Users Section
           </Button>

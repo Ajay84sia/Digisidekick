@@ -57,7 +57,7 @@ const Signin = () => {
   };
 
   if (isAuth) {
-    return <Navigate to="/getdeal" />;
+    return <Navigate to="/" />;
   }
   return (
     <Box style={{ width: "100%" }}>
