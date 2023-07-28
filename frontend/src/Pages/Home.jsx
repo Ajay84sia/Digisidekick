@@ -95,7 +95,7 @@ const Home = () => {
         <Box
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: "repeat(4, 1fr)",
             gap: "30px",
             width: "90%",
             margin: "auto",
