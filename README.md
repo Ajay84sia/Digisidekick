@@ -45,7 +45,7 @@
 ![image](https://github.com/Ajay84sia/Digisidekick/assets/98752820/c22bb1f7-042f-4654-8620-fdf1067e822d)
 
 
-# 🏷️ Edit Deals Page
+# 🏷️ Edit User Page
 
 ![image](https://github.com/Ajay84sia/Digisidekick/assets/98752820/aa468502-2624-41de-afe1-032cada547cf)
 
